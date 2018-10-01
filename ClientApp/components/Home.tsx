@@ -182,7 +182,7 @@ export class Home extends React.Component<{}, IHomeState> {
         let departureHeader = '';
         let stationsRender = null;
         let depatureRender = null;
-        let stopsOnRouteRender: any;
+        const depatureContainer = "depature-container";
         
 
         if (this.state.showStations) {
@@ -233,6 +233,7 @@ export class Home extends React.Component<{}, IHomeState> {
         }
 
         return <Container>
+          
             <Segment>
                 <div className="my-app">
                     <div className="container">
@@ -240,8 +241,10 @@ export class Home extends React.Component<{}, IHomeState> {
                         <button onClick={this.onButtonClick} disabled={!(text.trim())}>search</button>
                         <button onClick={this.onClearClick} disabled={!this.state.showStations}>clear</button>
                         {stationsRender}
-                        <h5>{departureHeader}</h5>
-                        {depatureRender}
+                        <div className={this.state.showDepartures ? depatureContainer : ''}>
+                            <h5>{departureHeader}</h5>
+                            {depatureRender}
+                        </div>
                     </div>
                 </div>
             </Segment>

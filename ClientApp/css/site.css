@@ -15,6 +15,7 @@
 
 }
 
+
 .my-app input:focus {outline:0;}
 
 .my-app button {
@@ -54,3 +55,14 @@
     border-radius: 5px;
     box-shadow: 0 2px 3px #ccc;
 }
+
+.depature-container {
+    box-shadow: 0 2px 3px #ccc;
+    background: rgb(59, 146, 127);
+    border-radius: 5px;
+    padding: 16px;
+    color: white;
+
+}
+
+
